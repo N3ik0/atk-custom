@@ -40,3 +40,25 @@ add_theme_support('post-thumbnails');
 
 // Activation generation automatique balise title
 add_theme_support('title-tag');
+
+//Modification de la longueur de l'éxtrait
+function new_excerpt_length($length) {
+     return 20;
+}
+
+
+// Register custom nav
+require_once get_template_directory() . '/assets/vendor/wp-bootstrap-navlist-walker.php';
+
+// Enregistrement des menus
+register_nav_menus(array(
+     // Nom du menu => 
+     'Header' => __('Header-menu', 'Atk-custom'),
+     'Footer' => __('Footer', 'Atk-custom')
+)); 
+
+register_nav_menus( array(
+	'primary' => __( 'Primary Menu', 'THEMENAME' ),
+) );
+
+

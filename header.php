@@ -36,6 +36,8 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse nav-collapse">
+
+                         <!--
                         <div class="menu-container">
                             <ul class="navbar-nav navbar-nav-right">
                                 <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="index.html">Home</a></li>
@@ -45,7 +47,19 @@
                                 <li class="nav-item"><a class="nav-item-child nav-item-hover" href="faq.html">FAQ</a></li>
                                 <li class="nav-item"><a class="nav-item-child nav-item-hover" href="contact.html">Contact</a></li>
                             </ul>
-                        </div>
+                        </div> -->
+                    
+                         <?php wp_nav_menu(array(
+                              'theme_location' => 'header-menu', 
+                              'menu_class' => 'navbar-nav navbar-nav-right',
+                              'menu_id' => '', 
+                              'container' => 'div',
+                              'container_class' => 'menu-container', 
+                              'container_id' => '', 
+                              'depth' => 2, 
+                              'fallback_cb'       => 'wp_bootstrap_navlist_walker::fallback',
+                              'walker'			=> new wp_bootstrap_navlist_walker()
+                         )); ?>
                     </div>
                     <!-- End Navbar Collapse -->
                 </div>
