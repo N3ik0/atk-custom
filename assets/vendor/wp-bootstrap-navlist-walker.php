@@ -172,7 +172,7 @@ class WP_Bootstrap_Navlist_Walker extends Walker_Nav_Menu {
 			if ( $menu_class ) {
 				echo ' class="' . esc_attr( $menu_class ) . '"'; }
 				echo '>';
-				echo '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', '' ) . '</a></li>';
+				echo '<li class="nav-item"><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', '' ) . '</a></li>';
 				echo '</ul>';
 			if ( $container ) {
 				echo '</' . esc_attr( $container ) . '>';

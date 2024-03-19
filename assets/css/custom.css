@@ -1,0 +1,29 @@
+/* Style de la barre de navigation */
+@media (min-width: 1024px) {
+     .navbar-nav {
+          display: flex; /* Active Flexbox pour le conteneur */
+          justify-content: center; /* Centre les éléments horizontalement */
+          align-items: center; /* Centre les éléments verticalement */
+          list-style: none; /* Supprime les puces de la liste */
+          padding: 0; /* Supprime le padding par défaut */
+          color:floralwhite;
+          padding-top:50px;
+     }
+     
+     .navbar-nav li {
+          margin: 0 15px; /* Ajoute un espacement horizontal entre les éléments */
+     }
+     
+}
+
+.navbar-nav a {
+     text-decoration: none; /* Supprime le soulignement des liens */
+     color: #eeeeee; /* Définit la couleur du texte des liens */
+     font-family: 'Hind', sans-serif; /* Définit la police de caractères des liens */
+}
+
+/* Ajoutez des styles supplémentaires pour l'élément actif */
+.navbar-nav li.active a {
+     font-weight: bold; /* Rend le texte de l'élément actif plus gras */
+     color: #007bff; /* Change la couleur pour l'élément actif, ajustez selon votre palette de couleurs */
+}

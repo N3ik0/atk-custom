@@ -27,35 +27,22 @@
                         <!-- Logo -->
                         <div class="logo">
                             <a class="logo-wrap" href="index.html">
-                                <img class="logo-img logo-img-main" src="<?php echo get_template_directory_uri();?>assets/img/logo.png" alt="Atk logo">
-                                <img class="logo-img logo-img-active" src="<?php echo get_template_directory_uri();?>assets/img/logo-dark.png" alt="Atk logo">
+                                <img class="logo-img logo-img-main" src="<?php echo get_template_directory_uri();?>/assets/img/atk-logo.svg" alt="Atk logo">
+                                <img class="logo-img logo-img-active" src="<?php echo get_template_directory_uri();?>/assets/img/atk-logo.svg" alt="Atk logo">
                             </a>
                         </div>
                         <!-- End Logo -->
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse nav-collapse">
-
-                         <!--
-                        <div class="menu-container">
-                            <ul class="navbar-nav navbar-nav-right">
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="pricing.html">Our services</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="about.html">About</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="products.html">Products</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="faq.html">FAQ</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="contact.html">Contact</a></li>
-                            </ul>
-                        </div> -->
-                    
+                    <div class="collapse navbar-collapse nav-collapse">                    
                          <?php wp_nav_menu(array(
-                              'theme_location' => 'header-menu', 
+                              'theme_location' => 'Header', 
                               'menu_class' => 'navbar-nav navbar-nav-right',
                               'menu_id' => '', 
                               'container' => 'div',
                               'container_class' => 'menu-container', 
-                              'container_id' => '', 
+                              'container_id' => '',
                               'depth' => 2, 
                               'fallback_cb'       => 'wp_bootstrap_navlist_walker::fallback',
                               'walker'			=> new wp_bootstrap_navlist_walker()

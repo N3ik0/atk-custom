@@ -30,6 +30,7 @@ function api_styles(){
         wp_enqueue_style('css-animate', get_template_directory_uri(  ).'/assets/css/animate.css', array(), null);
         wp_enqueue_style('css-swiper', get_template_directory_uri(  ).'/assets/vendor/swiper/css/swiper.min.css', array(), null);
         wp_enqueue_style('css-layout', get_template_directory_uri(  ).'/assets/css/layout.css', array(), null);
+        wp_enqueue_style('css-custom', get_template_directory_uri(  ).'/assets/css/custom.css', array(), null);
         wp_enqueue_style('icons-shortcut', 'favicon.ico', array(), null);
 }
 add_action('wp_enqueue_scripts', 'api_styles');
@@ -50,15 +51,12 @@ function new_excerpt_length($length) {
 // Register custom nav
 require_once get_template_directory() . '/assets/vendor/wp-bootstrap-navlist-walker.php';
 
+
 // Enregistrement des menus
 register_nav_menus(array(
-     // Nom du menu => 
+     // Id du menu => Nom affiché dans l'admin, text-domain
      'Header' => __('Header-menu', 'Atk-custom'),
      'Footer' => __('Footer', 'Atk-custom')
 )); 
-
-register_nav_menus( array(
-	'primary' => __( 'Primary Menu', 'THEMENAME' ),
-) );
 
 

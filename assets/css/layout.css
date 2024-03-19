@@ -796,7 +796,7 @@ fieldset[disabled] .btn-theme {
 /* Page On Scroll */
 @media (min-width: 992px) {
   .page-on-scroll .header .navbar {
-    background: #fff;
+    background: #0c0c0c;
     border-bottom-color: #f0f0f0;
     transition-duration: 300ms;
     transition-property: all;
