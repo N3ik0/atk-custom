@@ -6,7 +6,8 @@ function api_scripts(){
         wp_enqueue_script('js-jquery-migrate', get_template_directory_uri(  ).'/assets/vendor/jquery-migrate.min.js', array(), false, true);
         wp_enqueue_script('js-bootstrap', get_template_directory_uri(  ).'/assets/vendor/bootstrap/js/bootstrap.min.js', array(), false, true);
         wp_enqueue_script('js-jquery-easing', get_template_directory_uri(  ).'/assets/vendor/jquery.easing.js', array(), false, true);
-        wp_enqueue_script('js-backtotop', get_template_directory_uri(  ).'/vendor/jquery.back-to-top.js', array(), false, true);
+        wp_enqueue_script('js-jquery-parallax', get_template_directory_uri(  ).'/assets/vendor/jquery.parallax.min.js', array(), false, true);
+        wp_enqueue_script('js-backtotop', get_template_directory_uri(  ).'/assets/vendor/jquery.back-to-top.js', array(), false, true);
         wp_enqueue_script('js-smooth-scroll', get_template_directory_uri(  ).'/assets/vendor/jquery.smooth-scroll.js', array(), false, true);
         wp_enqueue_script('js-wow', get_template_directory_uri(  ).'/assets/vendor/jquery.wow.min.js', array(), false, true);
         wp_enqueue_script('js-swiper', get_template_directory_uri(  ).'/assets/vendor/swiper/js/swiper.jquery.min.js', array(), false, true);
@@ -44,8 +45,9 @@ add_theme_support('title-tag');
 
 //Modification de la longueur de l'éxtrait
 function new_excerpt_length($length) {
-     return 20;
+        return 25;
 }
+add_filter('excerpt_length', 'new_excerpt_length');
 
 
 // Register custom nav
@@ -59,4 +61,25 @@ register_nav_menus(array(
      'Footer' => __('Footer', 'Atk-custom')
 )); 
 
+function api_post_type() 
+{
+    register_post_type(
+        // Nom du post type - Slug
+        'service', array
+        (
+            'label' => 'service',
+            'labels' => array
+            (
+                'name' => 'Services',
+                'singular_name' => 'Service'
+            ),
+            'public' => true,
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'has_archive' => false,
+            'menu_icon' => 'dashicons-format-status',
+            'show_in_rest' => true
+        )
+    );
+}
+add_action('init', 'api_post_type');
 

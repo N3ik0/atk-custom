@@ -27,3 +27,11 @@
      font-weight: bold; /* Rend le texte de l'élément actif plus gras */
      color: #007bff; /* Change la couleur pour l'élément actif, ajustez selon votre palette de couleurs */
 }
+
+
+
+/* Parallax */
+.parallax-window {
+     min-height: 400px;
+     background: transparent;
+ }

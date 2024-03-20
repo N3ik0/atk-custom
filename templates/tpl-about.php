@@ -1,15 +1,14 @@
- <?php
+<?php
 /*
 Template Name: About
 Description: About page
 */
-
 get_header(); ?>
- 
- <!--========== PARALLAX ==========-->
- <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri();?>/assets/img/1920x1080/01.jpg">
+
+<!--========== PARALLAX ==========-->
+        <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri();?>/assets/img/1920x1080/06.webp">
             <div class="parallax-content container">
-                <h1 class="carousel-title">About Us</h1>
+                <h1 class="carousel-title">A propos</h1>
                 <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br/> enim minim estudiat veniam siad venumus dolore</p>
             </div>
         </div>
@@ -22,23 +21,20 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
-                            <h3>Art Of Coding</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna ut consequat siad esqudiat dolor</p>
-                            <a class="link" href="#">Read More</a>
+                            <h3><?php the_field('titre_triple_1');?></h3>
+                            <p><?php the_field('texte_triple_1');?></p>
                         </div>
                     </div>
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
-                            <h3>Clean Design</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna ut consequat siad esqudiat dolor</p>
-                            <a class="link" href="#">Read More</a>
+                            <h3><?php the_field('titre_triple_2');?></h3>
+                            <p><?php the_field('texte_triple_2');?></p>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
-                            <h3>Amazing Support</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna ut consequat siad esqudiat dolor</p>
-                            <a class="link" href="#">Read More</a>
+                            <h3><?php the_field('titre_triple_3');?></h3>
+                            <p><?php the_field('texte_triple_3');?></p>
                         </div>
                     </div>
                 </div>
@@ -48,132 +44,36 @@ get_header(); ?>
         <!-- End Features -->
 
         <!-- About -->
-        <div class="content-lg container">
-            <div class="row margin-b-20">
-                <div class="col-sm-6">
-                    <h2>About</h2>
-                </div>
-            </div>
-            <!--// end row -->
-
-            <div class="row">
-                <div class="col-sm-7 sm-margin-b-50">
-                    <div class="margin-b-30">
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua. Ut enimet minim veniam magna aliqua. Ut enim minim veniam exercitation laboris ut siad consequat siad minim enum esqudiat dolore.</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret tempor incididunt dolore magna consequat siad minim aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua. Ut enim minim veniam exercitation laboris ut siad consequat siad minim enum esqudiat dolore.</p>
-                </div>
-                <div class="col-sm-4 col-sm-offset-1">
-                    <img class="img-responsive" src="img/640x380/01.jpg" alt="Our Office">
-                </div>
-            </div>
-            <!--// end row -->
-        </div>
-        <!-- End About -->
-
-        <!-- Service -->
-        <div class="bg-color-sky-light" data-auto-height="true">
+        <div class="bg-color-sky-light">
             <div class="content-lg container">
-                <div class="row row-space-1 margin-b-2">
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-chemistry"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Art Of Coding</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-screen-tablet"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Responsive Design</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-badge"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Feature Reach</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
+                <div class="row margin-b-20">
+                    <div class="col-sm-6">
+                        <h2>Qui sommes nous</h2>
                     </div>
                 </div>
                 <!--// end row -->
 
-                <div class="row row-space-1">
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".4s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-notebook"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Useful Documentation</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
+                <div class="row">
+                    <div class="col-sm-7 sm-margin-b-50">
+                        <div class="margin-b-30">
+                            <?php the_field('texte_about');?>
                         </div>
                     </div>
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".5s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-speedometer"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Fast Delivery</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".6s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-badge"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Free Plugins</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <?php $imgAbout = get_field('img_about');?>
+                        <img class="img-responsive" src="<?php echo $imgAbout['url'];?>" alt="<?php echo $imgAbout['alt'];?>">
                     </div>
                 </div>
                 <!--// end row -->
             </div>
-        </div>
-        <!-- End Service -->
+            <!-- End About -->
+</div>
 
         <!-- Testimonials -->
-        <div class="content-lg container">
+        <div class="content-lg container ">
             <div class="row">
                 <div class="col-sm-9">
-                    <h2>Notes From CEO</h2>
+                    <h2>Note de l'équipe</h2>
 
                     <!-- Swiper Testimonials -->
                     <div class="swiper-slider swiper-testimonials">
@@ -182,23 +82,16 @@ get_header(); ?>
                             <div class="swiper-slide">
                                 <blockquote class="blockquote">
                                     <div class="margin-b-20">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua. Ut enim minim veniam exercitation laboris ut siad consequat siad minim enum esqudiat dolore.
+                                        <?php the_field('texte_note_1');?>
                                     </div>
-                                    <div class="margin-b-20">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret tempor incididunt dolore magna consequat siad minim aliqua.
-                                    </div>
-                                    <p><span class="fweight-700 color-link">Joh Milner</span>, Metronic Customer</p>
+                                    <p><span class="fweight-700 color-link"><?php the_field('creator_note_1');?></span></p>
                                 </blockquote>
                             </div>
                             <div class="swiper-slide">
                                 <blockquote class="blockquote">
                                     <div class="margin-b-20">
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </div>
-                                    <div class="margin-b-20">
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </div>
-                                    <p><span class="fweight-700 color-link">Alex Clarson</span>, Metronic Customer</p>
+                                        <?php the_field('texte_note_2');?>
+                                        <p><span class="fweight-700 color-link"><?php the_field('creator_note_2');?></span></p>
                                 </blockquote>
                             </div>
                         </div>
@@ -219,8 +112,8 @@ get_header(); ?>
             <div class="content-lg container">
                 <div class="row margin-b-40">
                     <div class="col-sm-6">
-                        <h2>Meet the Team</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p>
+                        <h2>Rencontrez l'équipe</h2>
+                        <p><?php the_field('team_texte_entete');?></p>
                     </div>
                 </div>
                 <!--// end row -->
@@ -230,12 +123,12 @@ get_header(); ?>
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="bg-color-white margin-b-20">
                             <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                                <img class="img-responsive" src="img/770x860/01.jpg" alt="Team Image">
+                                <?php $imgTeam1 = get_field('img_team_m1');?>
+                                <img class="img-responsive" src="<?php echo $imgTeam1['url']; ?>" alt="<?php echo $imgTeam1['alt']; ?>">
                             </div>
                         </div>
-                        <h4><a href="#">Alicia Keys</a> <span class="text-uppercase margin-l-20">Project Manager</span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                        <a class="link" href="#">Read More</a>
+                        <h4><a href="#"><?php the_field('team_name_m1');?></a> <span class="text-uppercase margin-l-20"><?php the_field('team_rank_m1');?></span></h4>
+                        <p><?php the_field('team_text_m1');?></p>
                     </div>
                     <!-- End Team -->
 
@@ -243,12 +136,12 @@ get_header(); ?>
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="bg-color-white margin-b-20">
                             <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                                <img class="img-responsive" src="img/770x860/02.jpg" alt="Team Image">
+                                <?php $imgTeam1 = get_field('img_team_m2');?>
+                                <img class="img-responsive" src="<?php echo $imgTeam1['url']; ?>" alt="<?php echo $imgTeam1['alt']; ?>">
                             </div>
                         </div>
-                        <h4><a href="#">James Millner</a> <span class="text-uppercase margin-l-20">Lead Developer</span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                        <a class="link" href="#">Read More</a>
+                        <h4><a href="#"><?php the_field('team_name_m2');?></a> <span class="text-uppercase margin-l-20"><?php the_field('team_rank_m2');?></span></h4>
+                        <p><?php the_field('team_text_m2');?></p>
                     </div>
                     <!-- End Team -->
 
@@ -256,12 +149,12 @@ get_header(); ?>
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="bg-color-white margin-b-20">
                             <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                                <img class="img-responsive" src="img/770x860/03.jpg" alt="Team Image">
+                                <?php $imgTeam3 = get_field('img_team_m3');?>
+                                <img class="img-responsive" src="<?php echo $imgTeam3['url']; ?>" alt="<?php echo $imgTeam3['alt']; ?>">
                             </div>
                         </div>
-                        <h4><a href="#">Scarlet Johanson</a> <span class="text-uppercase margin-l-20">Designer</span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                        <a class="link" href="#">Read More</a>
+                        <h4><a href="#"><?php the_field('team_name_m3');?></a> <span class="text-uppercase margin-l-20"><?php the_field('team_rank_m3');?></span></h4>
+                        <p><?php the_field('team_text_m3');?></p>
                     </div>
                     <!-- End Team -->
                 </div>

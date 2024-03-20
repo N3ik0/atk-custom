@@ -10,7 +10,7 @@ get_header();
 
 
 
-        <!--========== SLIDER ==========-->
+        <!--========== SLIDER HERO==========-->
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <div class="container">
                 <!-- Indicators -->
@@ -23,26 +23,28 @@ get_header();
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img class="img-responsive" src="<?php echo get_template_directory_uri();?>/assets/img/1920x1080/06.webp" alt="Slider Image">
+                    <?php $heroBackground1 = get_field('hero_background_1'); ?>
+                    <img class="img-responsive" src="<?php echo $heroBackground1['url'];?>" alt="<?php echo $heroBackground1['alt'];?>">
                     <div class="container">
                         <div class="carousel-centered">
                             <div class="margin-b-40">
-                                <h1 class="carousel-title">Atk Performance</h1>
-                                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br/> enim minim estudiat veniam siad venumus dolore</p>
+                                <?php the_field('hero_title_1');?>
+                                <?php the_field('hero_text_1');?>
                             </div>
-                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Contactez-nous</a>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="img-responsive" src="<?php echo get_template_directory_uri();?>/assets/img/1920x1080/05.webp" alt="Slider Image">
+                <?php $heroBackground2 = get_field('hero_background_2'); ?>
+                    <img class="img-responsive" src="<?php echo $heroBackground2['url'];?>" alt="<?php echo $heroBackground2['alt'];?>">
                     <div class="container">
                         <div class="carousel-centered">
                             <div class="margin-b-40">
-                                <h2 class="carousel-title">Atk Performance</h2>
-                                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br/> enim minim estudiat veniam siad venumus dolore</p>
+                                <h2 class="carousel-title"><?php the_field('hero_title_1');?></h2>
+                                <?php the_field('hero_text_2');?>
                             </div>
-                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Contactez-nous</a>
                         </div>
                     </div>
                 </div>
@@ -62,8 +64,8 @@ get_header();
                                     <i class="service-icon icon-speedometer"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Entretien</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    <div class="margin-b-5">
+                                    <?php the_field('text_service_icon_1');?></div>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -76,8 +78,8 @@ get_header();
                                     <i class="service-icon icon-badge"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Carrosserie</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    <div class="margin-b-5">
+                                    <?php the_field('text_service_icon_2');?></div>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -90,8 +92,8 @@ get_header();
                                     <i class="service-icon icon-fire"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Peinture</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    <div class="margin-b-5">
+                                    <?php the_field('text_service_icon_3');?></div>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -108,8 +110,8 @@ get_header();
                                     <i class="service-icon icon-check"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Pneumatique</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    <div class="margin-b-5">
+                                    <?php the_field('text_service_icon_4');?></div>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -122,8 +124,8 @@ get_header();
                                     <i class="service-icon icon-list"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Detailing</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    <div class="margin-b-5">
+                                    <?php the_field('text_service_icon_5');?></div>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -136,10 +138,10 @@ get_header();
                                     <i class="service-icon icon-plus"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Et plus encore...</h3>
-                                    <p class="margin-b-5">Cliquez ici pour découvrir tous nos services.</p>
+                                    <div class="margin-b-5">
+                                    <?php the_field('text_service_icon_6');?></div>
                                 </div>
-                                <a href="#" class="content-wrapper-link"></a>    
+                                <a href="#" class="content-wrapper-link"></a>  
                             </div>
                         </div>
                     </div>
@@ -153,57 +155,50 @@ get_header();
         <div class="content-lg container">
             <div class="row margin-b-40">
                 <div class="col-sm-6">
-                    <h2>Latest Products</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p>
+                    <h2>Dernières réalisations</h2>
+                    <?php the_field('top_text_achievements');?>
                 </div>
             </div>
             <!--// end row -->
+
+          
 
             <div class="row">
                 <!-- Latest Products -->
+                <?php
+                $requete = new WP_Query(array
+                (
+                    // J'indique à WordPress de sélectionner un type d'élément spécifique
+                    'posts_per_page' => 3,
+                    'order' => 'DESC',
+                    'orderby' => 'ID'
+                ));
+                if ( $requete->have_posts() ) { while ($requete->have_posts())  { $requete->the_post();
+            ?>
                 <div class="col-sm-4 sm-margin-b-50">
                     <div class="margin-b-20">
-                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="assets/img/970x647/01.jpg" alt="Latest Products Image">
-                        </div>
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <?php if (has_post_thumbnail()) :
+                            $imgRealUrl = get_the_post_thumbnail_url();
+                            ?>
+                            <img class="img-responsive" src="<?php echo esc_url($imgRealUrl); ?>" alt="<?php the_title_attribute(); ?>">
+                        <?php endif; ?>
                     </div>
-                    <h4><a href="#">Triangle Roof</a> <span class="text-uppercase margin-l-20">Management</span></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
+                    </div>
+                    <h4><?php the_title();?></h4>
+                    <?php the_excerpt(); ?>
+                    <a class="link" href="<?php the_permalink();?>">En savoir plus</a>
                 </div>
                 <!-- End Latest Products -->
-
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="assets/img/970x647/02.jpg" alt="Latest Products Image">
-                        </div>
-                    </div>
-                    <h4><a href="#">Curved Corners</a> <span class="text-uppercase margin-l-20">Developmeny</span></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
-                </div>
-                <!-- End Latest Products -->
-
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="assets/img/970x647/03.jpg" alt="Latest Products Image">
-                        </div>
-                    </div>
-                    <h4><a href="#">Bird On Green</a> <span class="text-uppercase margin-l-20">Design</span></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
-                </div>
-                <!-- End Latest Products -->
+                <?php } } wp_reset_postdata(); ?>
             </div>
             <!--// end row -->
+            
         </div>
         <!-- End Latest Products -->
+        
 
-        <!-- Clients -->
+        <!-- Clients statique -->
         <div class="bg-color-sky-light">
             <div class="content-lg container">
                 <!-- Swiper Clients -->
@@ -240,7 +235,7 @@ get_header();
         <div class="content-lg container">
             <div class="row">
                 <div class="col-sm-9">
-                    <h2>Customer Reviews</h2>
+                    <h2>Avis clients</h2>
 
                     <!-- Swiper Testimonials -->
                     <div class="swiper-slider swiper-testimonials">
@@ -249,23 +244,17 @@ get_header();
                             <div class="swiper-slide">
                                 <blockquote class="blockquote">
                                     <div class="margin-b-20">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua. Ut enim minim veniam exercitation laboris ut siad consequat siad minim enum esqudiat dolore.
+                                       <?php the_field('avis_clients_1');?>
                                     </div>
-                                    <div class="margin-b-20">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret tempor incididunt dolore magna consequat siad minim aliqua.
-                                    </div>
-                                    <p><span class="fweight-700 color-link">Joh Milner</span>, Metronic Customer</p>
+                                    <?php the_field('auteur_avis_clients_1');?>
                                 </blockquote>
                             </div>
                             <div class="swiper-slide">
                                 <blockquote class="blockquote">
-                                    <div class="margin-b-20">
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <div class="margin-b-20">
+                                       <?php the_field('avis_clients_2');?>
                                     </div>
-                                    <div class="margin-b-20">
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </div>
-                                    <p><span class="fweight-700 color-link">Alex Clarson</span>, Metronic Customer</p>
+                                    <?php the_field('auteur_avis_clients_2');?>
                                 </blockquote>
                             </div>
                         </div>
@@ -281,77 +270,16 @@ get_header();
         </div>
         <!-- End Testimonials -->
 
-        <!-- Pricing -->
-        <div class="bg-color-sky-light">
-            <div class="content-lg container">
-                <div class="row row-space-1">
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <!-- Pricing -->
-                        <div class="pricing">
-                            <div class="margin-b-30">
-                                <i class="pricing-icon icon-chemistry"></i>
-                                <h3>Starter Kit <span> - $</span> 49</h3>
-                                <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                            </div>
-                            <ul class="list-unstyled pricing-list margin-b-50">
-                                <li class="pricing-list-item">Basic Features</li>
-                                <li class="pricing-list-item">Up to 5 products</li>
-                                <li class="pricing-list-item">50 Users Panels</li>
-                            </ul>
-                            <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                        </div>
-                        <!-- End Pricing -->
-                    </div>
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <!-- Pricing -->
-                        <div class="pricing pricing-active">
-                            <div class="margin-b-30">
-                                <i class="pricing-icon icon-badge"></i>
-                                <h3>Professional <span> - $</span> 149</h3>
-                                <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                            </div>
-                            <ul class="list-unstyled pricing-list margin-b-50">
-                                <li class="pricing-list-item">Basic Features</li>
-                                <li class="pricing-list-item">Up to 100 products</li>
-                                <li class="pricing-list-item">100 Users Panels</li>
-                            </ul>
-                            <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                        </div>
-                        <!-- End Pricing -->
-                    </div>
-                    <div class="col-sm-4">
-                        <!-- Pricing -->
-                        <div class="pricing">
-                            <div class="margin-b-30">
-                                <i class="pricing-icon icon-shield"></i>
-                                <h3>Advanced <span> - $</span> 249</h3>
-                                <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                            </div>
-                            <ul class="list-unstyled pricing-list margin-b-50">
-                                <li class="pricing-list-item">Extended Features</li>
-                                <li class="pricing-list-item">Unlimited products</li>
-                                <li class="pricing-list-item">Unlimited Users Panels</li>
-                            </ul>
-                            <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                        </div>
-                        <!-- End Pricing -->
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End Pricing -->
 
         <!-- Promo Section -->
-        <div class="promo-section overflow-h">
+        <div class="promo-section overflow-h bg-color-sky-light">
             <div class="container">
                 <div class="clearfix">
                     <div class="ver-center">
                         <div class="ver-center-aligned">
                             <div class="promo-section-col">
-                                <h2>Our Work</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p>
-                                <p>Ipsum dolor sit amet consectetur adipiscing elit sed tempor incididut ut sead laboret dolore magna aliqua enim minim veniam exercitation ipsum dolor sit amet consectetur adipiscing</p>
+                                <h2>Des années d'éxperiences</h2>
+                                <?php the_field('text_promo_section');?>
                             </div>
                         </div>
                     </div>
@@ -364,11 +292,11 @@ get_header();
         <!-- End Promo Section -->
 
         <!-- Work -->
-        <div class="bg-color-sky-light overflow-h">
+        <div class="overflow-h">
             <div class="content-lg container">
                 <div class="row margin-b-40">
                     <div class="col-sm-6">
-                        <h2>Showcase</h2>
+                        <h2>Un lieu de savoir faire</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p>
                     </div>
                 </div>
@@ -381,11 +309,12 @@ get_header();
                         <!-- Work -->
                         <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".1s">
                             <div class="work-overlay">
-                                <img class="full-width img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/800x400/01.webp" alt="Portfolio Image">
+                                <?php $imgMasonry1 = get_field('masonry_img_1'); ?>
+                                <img class="full-width img-responsive" src="<?php echo $imgMasonry1['url']; ?>" alt="<?php echo $imgMasonry1['alt']; ?>">
                             </div>
                             <div class="work-content">
-                                <h3 class="color-white margin-b-5">Entretien</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                                <h3 class="color-white margin-b-5"><?php the_field('masonry_title_1'); ?></h3>
+                                <?php the_field('masonry_text_1'); ?>
                             </div>
                             <a class="content-wrapper-link" href="#"></a>
                         </div>
@@ -393,13 +322,14 @@ get_header();
                     </div>
                     <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
                         <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".2s">
+                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".1s">
                             <div class="work-overlay">
-                                <img class="full-width img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/397x400/01.webp" alt="Portfolio Image">
+                                <?php $imgMasonry2 = get_field('masonry_img_2'); ?>
+                                <img class="full-width img-responsive" src="<?php echo $imgMasonry2['url']; ?>" alt="<?php echo $imgMasonry2['alt']; ?>">
                             </div>
                             <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                                <h3 class="color-white margin-b-5"><?php the_field('masonry_title_2'); ?></h3>
+                                <?php the_field('masonry_text_2'); ?>
                             </div>
                             <a class="content-wrapper-link" href="#"></a>
                         </div>
@@ -407,55 +337,14 @@ get_header();
                     </div>
                     <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
                         <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".3s">
+                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".1s">
                             <div class="work-overlay">
-                                <img class="full-width img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/397x300/01.webp" alt="Portfolio Image">
+                                <?php $imgMasonry3 = get_field('masonry_img_3'); ?>
+                                <img class="full-width img-responsive" src="<?php echo $imgMasonry3['url']; ?>" alt="<?php echo $imgMasonry3['alt']; ?>">
                             </div>
                             <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-                            </div>
-                            <a class="content-wrapper-link" href="#"></a>
-                        </div>
-                        <!-- End Work -->
-                    </div>
-                    <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
-                        <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".4s">
-                            <div class="work-overlay">
-                                <img class="full-width img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/397x300/02.webp" alt="Portfolio Image">
-                            </div>
-                            <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-                            </div>
-                            <a class="content-wrapper-link" href="#"></a>
-                        </div>
-                        <!-- End Work -->
-                    </div>
-                    <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
-                        <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".5s">
-                            <div class="work-overlay">
-                                <img class="full-width img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/397x300/03.webp" alt="Portfolio Image">
-                            </div>
-                            <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-                            </div>
-                            <a class="content-wrapper-link" href="#"></a>
-                        </div>
-                        <!-- End Work -->
-                    </div>
-                    <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
-                        <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".5s">
-                            <div class="work-overlay">
-                                <img class="full-width img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/397x400/02.webp" alt="Portfolio Image">
-                            </div>
-                            <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                                <h3 class="color-white margin-b-5"><?php the_field('masonry_title_3'); ?></h3>
+                                <?php the_field('masonry_text_3'); ?>
                             </div>
                             <a class="content-wrapper-link" href="#"></a>
                         </div>
